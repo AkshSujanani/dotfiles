@@ -19,7 +19,7 @@ elif [ -x "$(command -v pacman)" ]; then
 	read -r -p "Do you want to buid neovim from source? (yes->y or any other key->no): " choice
 	if [[ $choice = "y" ]]; then
 		(
-			sudo pacman --noconfirm -S --needed base-devel cmake ninja msgpack lua ncurses python libuv curl git
+			sudo pacman --noconfirm -S --needed base-devel cmake lua python python3 curl
 			cd ~/
 			git clone https://github.com/neovim/neovim
 			cd neovim
