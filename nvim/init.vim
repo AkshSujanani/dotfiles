@@ -2,19 +2,17 @@
 "		PLUGINS			     "
 """"""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'EdenEast/nightfox.nvim' 
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'oxfist/night-owl.nvim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
-Plug 'rafi/awesome-vim-colorschemes'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-unimpaired'	"Keymappings prebuild
-Plug 'nvim-treesitter/nvim-treesitter', {'branch': 'master'} 
 Plug 'ryanoasis/vim-devicons'
+Plug 'nvim-treesitter/nvim-treesitter', {'branch': 'master'}
 Plug 'kdheepak/lazygit.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 call plug#end()
@@ -30,6 +28,7 @@ syntax enable
 set autoindent
 set smartindent
 set guicursor=n-v-c-i:block
+set clipboard=unnamedplus
 set hlsearch
 set incsearch
 set smartcase
@@ -37,7 +36,9 @@ set ruler
 set wildmenu
 set scrolloff=999
 set termguicolors
-colorscheme tokyonight-night 
+set tabstop=4
+set shiftwidth=4
+colorscheme tokyonight-night
 
 
 """"""""""""""""""""""""""""""""""""""""""""""
