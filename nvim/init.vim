@@ -1,10 +1,22 @@
+let mapleader = " "
+
 """"""""""""""""""""""""""""""""""""""""""""""
 "		PLUGINS			     "
 """"""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.local/share/nvim/plugged')
+
+"LSP SUPPORT"
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+"COLORSCHEMES"
 Plug 'oxfist/night-owl.nvim'
+Plug 'rebelot/kanagawa.nvim'
+Plug 'ellisonleao/gruvbox.nvim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'bluz71/vim-nightfly-colors', { 'as': 'nightfly' }
+Plug 'bluz71/vim-moonfly-colors', { 'as': 'moonfly' }
+
+"Other Necessities"
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
@@ -15,6 +27,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'nvim-treesitter/nvim-treesitter', {'branch': 'master'}
 Plug 'kdheepak/lazygit.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
+
 call plug#end()
 
 
@@ -35,33 +48,46 @@ set smartcase
 set ruler
 set wildmenu
 set scrolloff=999
-set termguicolors
 set tabstop=4
 set shiftwidth=4
-colorscheme tokyonight-night
+set background=dark
 
+""""""""""""""""""""""""""""""""""""""""""""""
+"		COLORSCHEME                     "
+""""""""""""""""""""""""""""""""""""""""""""""
+lua << EOF
+require("tokyonight").setup({
+  transparent = true,
+  styles = {
+    sidebars = "transparent",
+    floats   = "transparent",
+  },
+})
+EOF
+
+"lua << EOF
+"require("kanagawa").setup({
+"  transparent = true,
+"})
+"EOF
+
+"lua << EOF
+"require("gruvbox").setup({
+"  transparent_mode = true,
+"})
+"EOF
+
+"let g:nightflyTransparent = v:true
+
+"let g:moonflyTransparent = v:true
+
+colorscheme tokyonight
 
 """"""""""""""""""""""""""""""""""""""""""""""
 "		AIRLINE			     "
 """"""""""""""""""""""""""""""""""""""""""""""
-let g:airline_powerline_fonts = 1
-"let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 0
 let g:airline_theme = 'deus'
-
-
-""""""""""""""""""""""""""""""""""""""""""""""
-"		TREESITTER		     "
-""""""""""""""""""""""""""""""""""""""""""""""
-lua << EOF
-require("nvim-treesitter.configs").setup({
-    ensure_installed = { "javascript", "c", "lua", "vim", "json", "html", "cpp", "bash" , "css"},
-    sync_install = false,
-    auto_install = true,
-    highlight = {
-        enable = true,
-    },
-})
-EOF
 
 """"""""""""""""""""""""""""""""""""""""""""""
 "		NERDTREE		     "
@@ -77,7 +103,7 @@ lua require'colorizer'.setup()
 """"""""""""""""""""""""""""""""""""""""""""""
 "		LAZYGIT			     "
 """"""""""""""""""""""""""""""""""""""""""""""
-nnoremap <C-l> :LazyGit<CR>
+nnoremap <leader>l :LazyGit<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""
 "		Indentline		     "
@@ -94,3 +120,29 @@ require("ibl").setup {
   }
 }
 EOF
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""
+"		Keymappings		     "
+""""""""""""""""""""""""""""""""""""""""""""""
+
+" Move to Next buffer
+nnoremap <C-l> :bn<CR>
+
+" Move to Previous buffer
+nnoremap <C-h> :bp<CR>
+
+" Close only the current buffer
+
+" Confirm completion with <leader> + y
+"inoremap <silent><expr> <leader>y coc#pum#visible() ? coc#pum#confirm() : \"<leader>y"
+
+" Close the completion menu with <leader> + e
+"inoremap <silent><expr> <leader>e coc#pum#visible() ? coc#pum#cancel() : \"<leader>e"
+
+" Navigate down with <leader> + j
+"inoremap <silent><expr> <leader>j coc#pum#visible() ? coc#pum#next(1) : \"<leader>j"
+
+" Navigate up with <leader> + k
+"inoremap <silent><expr> <leader>k coc#pum#visible() ? coc#pum#prev(1) : \"<leader>k"
