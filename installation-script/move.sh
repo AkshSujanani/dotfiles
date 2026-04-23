@@ -11,5 +11,5 @@ cp -r picom ~/.config/
 cp -r rofi ~/.config/
 cp -r Starship/* ~/.config/
 cp -r tmux/.tmux.conf ~/
-cp -r Vim/* ~/
+cp -r Vim/.vimrc ~/
 cp -r Wallpapers ~/Pictures/
