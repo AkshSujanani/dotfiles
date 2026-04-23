@@ -20,7 +20,7 @@ Plug 'bluz71/vim-moonfly-colors', { 'as': 'moonfly' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
-Plug 'norcalli/nvim-colorizer.lua'
+Plug 'catgoose/nvim-colorizer.lua'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-unimpaired'	"Keymappings prebuild
 Plug 'ryanoasis/vim-devicons'
