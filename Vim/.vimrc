@@ -70,6 +70,3 @@ nnoremap <C-f> :NERDTreeFind<CR>
 """"""""""""""""""""""""""""""""""""""""""""""
 "let g:ale_linters = {'c': ['gcc', 'cppcheck']}
 "let g:ale_c_cc_executable = 'gcc'
-
-
-nnoremap <C-f> :NERDTreeFind<CR>
