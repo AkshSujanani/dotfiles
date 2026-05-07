@@ -27,6 +27,8 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'nvim-treesitter/nvim-treesitter', {'branch': 'master'}
 Plug 'kdheepak/lazygit.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'folke/noice.nvim'
+Plug 'MunifTanjim/nui.nvim'
 
 call plug#end()
 
@@ -98,6 +100,7 @@ nnoremap <C-f> :NERDTreeFind<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""
 lua require'colorizer'.setup()
+lua require("noice").setup()
 """"""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""
