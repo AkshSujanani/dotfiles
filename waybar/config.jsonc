@@ -1,0 +1,26 @@
+{
+  // Pull in module definitions from modules.json
+  "include": ["~/.config/waybar/modules.json"],
+
+  // ── Bar options ──────────────────────────────
+  "layer": "top",
+  "position": "right",
+  "width": 35,
+  "spacing": 4,
+  "exclusive": true,
+
+  // ── Module placement ─────────────────────────
+  // left = top of bar, center = middle, right = bottom
+  "modules-left": [
+    "clock"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "pulseaudio",
+    "custom/network",
+    "battery",
+    "tray"
+  ]
+}

@@ -1,0 +1,19 @@
+[[plugin.deps]]
+use = "yazi-rs/plugins:git"
+rev = "5d5c480"
+hash = "88e56a64b7ce7c4314427452343fef17"
+
+[[flavor.deps]]
+use = "BennyOe/tokyo-night"
+rev = "8e6296f"
+hash = "d9da921c3bd37ba32ee27a8a7a40461f"
+
+[[flavor.deps]]
+use = "yazi-rs/flavors:catppuccin-frappe"
+rev = "54ab389"
+hash = "1844f850b0c5d1af511c84399c95e3d7"
+
+[[flavor.deps]]
+use = "gosxrgxx/flexoki-dark"
+rev = "25d28ce"
+hash = "8e6dd7e42a127173e4535993d3e0e393"
