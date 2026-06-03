@@ -6,7 +6,7 @@ return {
 			"html",
 			"clangd",
 			"basedpyright",
-			"bash-language-server",
+			"bashls",
 			"cssls",
 			"lua_ls",
 		}	
