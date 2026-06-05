@@ -5,7 +5,7 @@ return {
 		ensure_installed = {
 			"html",
 			"clangd",
-			"basedpyright",
+			"pyright",
 			"bashls",
 			"cssls",
 			"lua_ls",
