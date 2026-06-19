@@ -58,5 +58,6 @@ return {
             update_in_insert = false,
             severity_sort = true,
         })
+		vim.lsp.handlers["$/progress"] = function() end
     end,
 }
