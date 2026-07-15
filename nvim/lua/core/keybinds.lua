@@ -24,3 +24,5 @@ vim.keymap.set('n', '<leader>fo',"<cmd>Telescope oldfiles<CR>", { desc = 'Telesc
 -- Auto-session keymaps
 vim.keymap.set("n", "<leader>wr", "<cmd>SessionRestore<CR>", { desc = "Restore Sessions "})
 vim.keymap.set("n", "<leader>ws", "<cmd>SessionSave<CR>", { desc = "Save Session"})
+
+-- yazi file manager keybindings are in lua/plugins/yazi.lua the file where yazi.nvim is defined
